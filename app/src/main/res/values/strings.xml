@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">ASAP</string>
+    <string name="KAKAO_NATIVE_APP_KEY">d5f029493a3305b01e391df9cf3cd52f</string>
+    <string name="KAKAO_REST_API_KEY">KakaoAK 2177648fde2061718f57306608063d2a</string>
+
+    <string name="some_id">지금,0x0A한시간만,0x0A매칭하세요!
+</string>
+    <string name="MAIN_TAB_ITEM1">일하기</string>
+    <string name="MAIN_TAB_ITEM2">사람 구하기</string>
+
+    <string name="JOIN"><u>회원가입</u></string>
+
+    <string-array name="type_data">
+        <item>홀서빙, 카운터</item>
+        <item>주방 보조</item>
+        <item>카페</item>
+        <item>판촉 도움</item>
+        <item>편의점</item>
+        <item>패널, 방청객, 심사단</item>
+        <item>자전거 배달</item>
+        <item>도보 배달</item>
+        <item>주방 보조</item>
+        <item>장보기</item>
+        <item>청소</item>
+        <item>설치, 조립, 수리</item>
+        <item>짐 운반</item>
+        <item>벌레, 쥐잡기</item>
+        <item>예체능 지도</item>
+        <item>취업 관련</item>
+        <item>언어 관련</item>
+        <item>학과 및 맞춤 과외</item>
+
+
+    </string-array>
+
+</resources>

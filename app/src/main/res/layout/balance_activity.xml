@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".BalanceActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="110dp"
+                    android:background="@drawable/upimage"
+                    android:maxWidth="39dip">
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="10dp"
+                    android:gravity="bottom"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.tabs.TabLayout
+                        android:id="@+id/tl_balance_tab"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="#00000000"
+                        app:tabGravity="center"
+                        app:tabIndicatorColor="#737373"
+                        app:tabMode="scrollable"
+                        app:tabSelectedTextColor="#ff000000"
+                        app:tabTextColor="#BEBEBE">
+
+                        <com.google.android.material.tabs.TabItem
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="입/출금내역"
+                            android:textStyle="bold">
+
+                        </com.google.android.material.tabs.TabItem>
+
+
+                        <com.google.android.material.tabs.TabItem
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="충전내역"
+                            android:textStyle="bold">
+
+                        </com.google.android.material.tabs.TabItem>
+
+                    </com.google.android.material.tabs.TabLayout>
+
+
+                </LinearLayout>
+            </FrameLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.viewpager.widget.ViewPager
+                    android:id="@+id/vp_balance_pager_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                </androidx.viewpager.widget.ViewPager>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bn_balance_position"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_weight="0"
+        app:menu="@menu/bottom_navigation_menu" />
+
+</LinearLayout>

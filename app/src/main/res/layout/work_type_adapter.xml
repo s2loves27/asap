@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_work_type_item"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:padding="8dp"
+    android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/item_work_type_big"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/tmonblack"
+        android:text="큰분류"/>
+    <TextView
+        android:id="@+id/item_work_type_small"
+        android:textSize="12dp"
+        android:textColor="#aaaaaa"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/tmonblack"
+        android:text="작은분류"/>
+
+</LinearLayout>

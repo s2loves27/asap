@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group
+        android:id="@+id/group1"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/item1"
+            android:checked="true"
+            android:icon="@drawable/ic_launcher_foreground"
+            android:title="내정보" />
+        <item
+            android:id="@+id/item2"
+            android:icon="@drawable/ic_launcher_foreground"
+            android:title="회원정보" />
+        <item
+            android:id="@+id/item3"
+            android:icon="@drawable/ic_launcher_foreground"
+            android:title="결제정보" />
+        <item
+            android:id="@+id/item4"
+            android:icon="@drawable/ic_launcher_foreground"
+            android:title="인증내역" />
+    </group>
+
+    <group>
+        <item
+            android:id="@+id/subtitle"
+            android:title="도움">
+            <menu>
+                <item
+                    android:id="@+id/item5"
+                    android:icon="@drawable/ic_launcher_foreground"
+                    android:title="고객센터" />
+
+                <item
+                    android:id="@+id/item6"
+                    android:icon="@drawable/ic_launcher_foreground"
+                    android:title="FAQ" />
+
+                <item
+                    android:id="@+id/item7"
+                    android:icon="@drawable/ic_launcher_foreground"
+                    android:title="FAQ" />
+
+                <item
+                    android:id="@+id/item8"
+                    android:icon="@drawable/ic_launcher_foreground"
+                    android:title="FAQ" />
+
+            </menu>
+        </item>
+
+    </group>
+</menu>

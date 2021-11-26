@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:gravity="center"
+    android:orientation="vertical"
+
+    tools:context=".JoinActivity">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="120dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="30dp"
+            android:src="@drawable/asap">
+
+        </ImageView>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:text="회원가입"
+            android:textColor="#000000"
+            android:textSize="9pt"
+            android:textStyle="bold"></TextView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="이메일 주소"
+                android:textColor="#000000"
+                android:textSize="7pt"
+                android:textStyle="bold"></TextView>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                app:boxStrokeColor = "@color/Mpuple5"
+                app:boxStrokeWidthFocused = "1dp"
+                app:boxStrokeWidth = "0dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginBottom="10dp"
+                android:gravity="center"
+                android:textColorHint="@color/gray5"
+
+                android:hint="이메일 주소를 입력해주세요"
+                app:hintTextAppearance ="@style/HintTextStyle"
+
+                >
+
+                <com.google.android.material.textfield.TextInputEditText
+
+                    android:id="@+id/et_join_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="12dp"
+                    android:layout_gravity="center"
+                    android:textSize="8pt"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="이름"
+                android:textColor="#000000"
+                android:textSize="7pt"
+                android:textStyle="bold"></TextView>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                app:boxStrokeColor = "@color/Mpuple5"
+                app:boxStrokeWidthFocused = "1dp"
+                app:boxStrokeWidth = "0dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginBottom="10dp"
+                android:gravity="center"
+                android:textColorHint="@color/gray5"
+                android:hint="성명을 입력해주세요"
+                app:hintTextAppearance ="@style/HintTextStyle"
+
+                >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_join_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="12dp"
+                    android:layout_gravity="center"
+                    android:textSize="8pt"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="비밀번호"
+                android:textColor="#000000"
+                android:textSize="7pt"
+                android:textStyle="bold"></TextView>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                app:boxStrokeColor = "@color/Mpuple5"
+                app:boxStrokeWidthFocused = "1dp"
+                app:boxStrokeWidth = "0dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginBottom="3dp"
+                android:gravity="center"
+                android:textColorHint="@color/gray5"
+                android:hint="비밀번호를 입력해주세요"
+                app:hintTextAppearance ="@style/HintTextStyle"
+
+                >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_join_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="12dp"
+                    android:layout_gravity="center"
+                    android:textSize="8pt"
+                    android:inputType="textPassword"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="영문 대소문자, 숫자, 특수문자를 3가지 이상 조합하여 8자 이상으로 입력해 주세요"
+                android:textColor="#000000"
+                android:textSize="5pt"
+                android:layout_marginBottom="10dp"
+                ></TextView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="비밀번호 확인"
+                android:textColor="#000000"
+                android:textSize="7pt"
+                android:textStyle="bold"
+                ></TextView>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                app:boxStrokeColor = "@color/Mpuple5"
+                app:boxStrokeWidthFocused = "1dp"
+                app:boxStrokeWidth = "0dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginBottom="20dp"
+                android:gravity="center"
+                android:textColorHint="@color/gray5"
+                android:hint="비밀번호를 확인해주세요"
+                app:hintTextAppearance ="@style/HintTextStyle"
+
+                >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_join_password2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="12dp"
+                    android:layout_gravity="center"
+                    android:textSize="8pt"
+                    android:inputType="textPassword"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+
+            <CheckBox
+                android:id="@+id/cb_join_agree_all"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:buttonTint="@color/Mpuple5"
+                android:textSize="9pt"
+                android:layout_marginBottom="15dp"
+                android:text="전체동의" />
+
+            <CheckBox
+                android:id="@+id/cb_join_agree_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/Mpuple5"
+                android:text="개인정보 수집 및 이용동의(필수)" />
+
+            <CheckBox
+                android:id="@+id/cb_join_agree_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/Mpuple5"
+                android:text="서비스 이용약관 확인 및 동의(필수)" />
+
+            <CheckBox
+                android:id="@+id/cb_join_agree_3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/Mpuple5"
+                android:text="마케팅 수신 동의(선택)" />
+
+
+            <Button
+                android:id="@+id/btn_join"
+                style="@style/NoPaddingTextButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="5dp"
+
+                android:minWidth="0dp"
+                android:minHeight="0dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+
+                android:text="회원가입하기"
+                android:textColor="@color/Mpuple6"
+                android:textSize="13pt"
+                android:textStyle="bold" />
+
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

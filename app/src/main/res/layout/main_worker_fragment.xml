@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/tmonblack"
+                    android:text="지금 구하는 일은 무엇인가요?"
+                    android:textColor="@color/primaryTextColor"
+                    android:textSize="8pt" />
+            </LinearLayout>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_row="0"
+                android:layout_rowWeight="1"
+                android:layout_column="0"
+                android:layout_columnWeight="1"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                app:cardBackgroundColor="@color/subbackground"
+                app:cardCornerRadius="1dp"
+                app:cardElevation="1dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="vertical">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:id="@+id/ll_main_worker_alba"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:layout_margin="10dp"
+                                android:background="@drawable/round_background"
+                                android:gravity="center">
+
+                                <ImageView
+                                    android:id="@+id/iv_main_worker_alba"
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    android:layout_gravity="center"
+                                    android:src="@drawable/clock"></ImageView>
+                            </LinearLayout>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/tmonblack"
+                                android:text="알바"
+                                android:textColor="#000000"
+                                android:textSize="6pt"
+                                android:textStyle="bold"></TextView>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:id="@+id/ll_main_worker_errand"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:layout_margin="10dp"
+                                android:background="@drawable/round_background"
+                                android:gravity="center">
+
+                                <ImageView
+                                    android:id="@+id/iv_main_worker_errand"
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    android:src="@drawable/map"></ImageView>
+                            </LinearLayout>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/tmonblack"
+                                android:text="심부름"
+                                android:textColor="#000000"
+                                android:textSize="6pt"
+                                android:textStyle="bold"></TextView>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:id="@+id/ll_main_worker_tutoring"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:layout_margin="10dp"
+                                android:background="@drawable/round_background"
+                                android:gravity="center">
+
+                                <ImageView
+                                    android:id="@+id/iv_main_worker_tutoring"
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    android:src="@drawable/book"></ImageView>
+                            </LinearLayout>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/tmonblack"
+                                android:text="과외"
+                                android:textColor="#000000"
+                                android:textSize="6pt"
+                                android:textStyle="bold"></TextView>
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginRight="30dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tv_main_worker_time"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="24시간"
+                            android:textColor="#626EF0"
+                            android:textSize="6pt"
+                            android:textStyle="bold">
+
+                        </TextView>
+
+                    </LinearLayout>
+
+                    <com.google.android.material.slider.RangeSlider
+                        android:id="@+id/rs_main_worker_time"
+                        style="@style/Myslider"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginRight="30dp"
+                        android:stepSize="0.5"
+                        android:valueFrom="0.0"
+                        android:valueTo="24.0"
+                        app:labelStyle="@style/Myslider.labelStyle"
+                        app:thumbColor="@color/pb5"
+
+                        app:thumbElevation="1dp"
+                        app:trackColorActive="#A7AEF6"
+                        app:trackColorInactive="#ffffff"
+                        app:values="@array/initial_slider_values"
+
+                        >
+
+
+                    </com.google.android.material.slider.RangeSlider>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginRight="30dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="오전12시"
+                            android:textColor="@color/gray8"
+                            android:textSize="4pt">
+
+
+                        </TextView>
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="9시"
+                            android:textColor="@color/gray8"
+                            android:textSize="4pt">
+
+
+                        </TextView>
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="오후6시"
+                            android:textColor="@color/gray8"
+                            android:textSize="4pt">
+
+
+                        </TextView>
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="right"
+                            android:text="오후11시 59분"
+                            android:textColor="@color/gray8"
+                            android:textSize="4pt">
+
+
+                        </TextView>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                app:cardBackgroundColor="@color/subbackground"
+                app:cardCornerRadius="1dp"
+                app:cardElevation="1dp"
+
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/ll_main_work_map"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="40dp"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:src="@drawable/position">
+
+                        </ImageView>
+
+                        <TextView
+
+                            android:id="@+id/tv_main_work_place"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:text="동대문구 신설동"
+                            android:textColor="#000000"
+                            android:textStyle="bold"></TextView>
+
+                    </LinearLayout>
+
+                    <TextView
+
+                        android:id="@+id/tv_main_work_address"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:text="동대문구 신설동"
+                        android:textSize="6pt"
+                        android:layout_marginLeft="50dp"
+                        android:textColor="@color/gray8"
+                        android:textStyle="bold"></TextView>
+
+                    <Button
+                        android:id="@+id/btn_main_work_matching"
+                        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="40dp"
+                        android:layout_marginRight="40dp"
+                        android:padding="10dp"
+                        android:text="매칭시작하기"
+                        android:textColor="@color/Mpuple6"
+                        android:textSize="8pt"
+                        android:textStyle="bold"
+                        app:backgroundTint=" #ffffff"
+                        app:strokeColor="@color/Mpuple5"
+                        app:strokeWidth="0.5dp"></Button>
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+    </ScrollView>
+</FrameLayout>

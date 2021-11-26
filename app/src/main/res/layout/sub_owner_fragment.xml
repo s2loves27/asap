@@ -1,0 +1,487 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+>
+
+    <ScrollView
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="30dp"
+            android:layout_marginRight="15dp"
+            app:cardCornerRadius="2dp"
+            app:cardElevation="2dp">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_marginTop="15dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="공고명"
+                    android:textColor="#000000"
+                    android:textSize="6pt"
+                    android:textStyle="bold"></TextView>
+
+                <LinearLayout
+                    android:id="@+id/ll_main_work_map"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="40dp"
+                        android:layout_marginRight="40dp"
+                        android:hint="공고명을 작성해 주세요."
+                        app:boxStrokeWidth="0dp"
+                        app:boxStrokeWidthFocused="1dp">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/et_sub_owner_title"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:padding="10dp" />
+
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="주소"
+                    android:textColor="#000000"
+                    android:textSize="6pt"
+                    android:textStyle="bold"></TextView>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_sub_owner_place"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="5"
+                        android:gravity="center_vertical"
+                        android:text="근무지의 주소를 작성해 주세요"
+                        android:textColor="@color/gray7"
+                        android:textSize="8pt"
+                        android:textStyle="bold">
+
+                    </TextView>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="right">
+
+                        <Button
+                            android:id="@+id/bt_sub_owner_place"
+                            style="@style/NoCircleTextButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:minWidth="0dp"
+                            android:minHeight="0dp"
+                            android:padding="3dp"
+                            android:text="검색하기"
+                            android:textColor="#000000"
+                            android:textSize="6pt"
+                            android:textStyle="bold"
+                            app:backgroundTint="@color/Mpuple3" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="업무시간"
+                    android:textColor="#000000"
+                    android:textSize="6pt"
+                    android:textStyle="bold"></TextView>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp">
+                    <TextView
+                        android:id="@+id/tv_sub_worker_time"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="24시간"
+                        android:textColor="#626EF0"
+                        android:gravity="center"
+                        android:textSize="6pt"
+                        android:textStyle="bold">
+
+                    </TextView>
+
+                </LinearLayout>
+
+                <com.google.android.material.slider.RangeSlider
+                    android:id="@+id/rs_sub_owner_time"
+                    style="@style/Myslider"
+                    app:labelStyle = "@style/Myslider.labelStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:stepSize="0.5"
+                    android:valueFrom="0.0"
+                    android:valueTo="24.0"
+                    app:thumbColor="@color/pb5"
+
+                    app:thumbElevation="1dp"
+                    app:trackColorActive="#A7AEF6"
+                    app:trackColorInactive="#ffffff"
+                    app:values="@array/initial_slider_values"
+
+                    >
+
+
+                </com.google.android.material.slider.RangeSlider>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="오전12시"
+                        android:textColor="@color/gray8"
+                        android:textSize="5pt">
+
+
+                    </TextView>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="9시"
+                        android:textColor="@color/gray8"
+                        android:textSize="5pt">
+
+
+                    </TextView>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="오후6시"
+                        android:textColor="@color/gray8"
+                        android:textSize="5pt">
+
+
+                    </TextView>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:text="오후11시 59분"
+                        android:textColor="@color/gray8"
+                        android:textSize="5pt">
+
+
+                    </TextView>
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:text="임금 (시급)"
+                    android:textColor="#000000"
+                    android:textSize="6pt"
+                    android:textStyle="bold"></TextView>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginRight="40dp"
+                        android:hint="임금을 입력해주세요."
+                        app:boxStrokeWidth="0dp"
+                        app:boxStrokeWidthFocused="1dp"
+                        android:layout_weight="2.5">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/et_sub_owner_payment"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:padding="10dp" />
+
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="right">
+
+                        <Button
+                            android:id="@+id/bt_sub_owner_payment"
+                            style="@style/NoCircleTextButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:minWidth="0dp"
+                            android:minHeight="0dp"
+                            android:padding="3dp"
+                            android:text="최저시급"
+                            android:textColor="#000000"
+                            android:textSize="6pt"
+                            android:textStyle="bold"
+                            app:backgroundTint="@color/Mpuple3" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:text="업무내용"
+                    android:textColor="#000000"
+                    android:textSize="6pt"
+
+                    android:textStyle="bold"></TextView>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                <Spinner
+                    android:id="@+id/sn_sub_owner_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:spinnerMode="dropdown"
+                    android:layout_gravity="center"/>
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:text="기타"
+                    android:textColor="#000000"
+                    android:textSize="6pt"
+                    android:textStyle="bold"></TextView>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginRight="40dp"
+                    android:hint="근무 여건 등 코멘트를 작성 해 주세요."
+                    app:boxStrokeWidth="0dp"
+                    app:boxStrokeWidthFocused="1dp"
+                    >
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_sub_owner_desc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:padding="10dp" />
+
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <Button
+                    android:id="@+id/btn_sub_owner_require"
+                    style="@style/NoPaddingTextButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="10dp"
+                    android:gravity="left"
+                    android:minWidth="0dp"
+                    android:minHeight="0dp"
+                    android:text="원하는 지원자 자격 요건이 있습니다. ▼ "
+                    android:textColor="#000000"
+                    android:textSize="7pt"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:id="@+id/ll_sub_owner_require"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <CheckBox
+                        android:id="@+id/rb_sub_owner_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:buttonTint="@color/Mpuple5"
+                        android:text="해당 업무에 경력이 있는 사람을 원합니다." />
+
+                    <CheckBox
+                        android:id="@+id/rb_sub_owner_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:buttonTint="@color/Mpuple5"
+                        android:text="해당 업무가 아니어도 알바 경력이 있는 사람을 원합니다." />
+
+                    <CheckBox
+                        android:id="@+id/rb_sub_owner_3"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:buttonTint="@color/Mpuple5"
+                        android:text="보건증을 소지 한 사람을 원합니다" />
+
+                    <CheckBox
+                        android:id="@+id/rb_sub_owner_4"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:buttonTint="@color/Mpuple5"
+                        android:text="프로필 사진이 있는 사람을 원합니다." />
+
+                    <CheckBox
+                        android:id="@+id/rb_sub_owner_5"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:buttonTint="@color/Mpuple5"
+                        android:text="평판 점수가 3.0 이상인 사람을 원합니다." />
+
+                    <CheckBox
+                        android:id="@+id/rb_sub_owner_6"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:buttonTint="@color/Mpuple5"
+                        android:text="여성 지원자만 원합니다." />
+
+                    <CheckBox
+                        android:id="@+id/rb_sub_owner_7"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:buttonTint="@color/Mpuple5"
+                        android:text="남성 지원자만 원합니다.." />
+
+                    <CheckBox
+                        android:id="@+id/rb_sub_owner_8"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:buttonTint="@color/Mpuple5"
+                        android:text="만19세 이상 ~ 29세의 지원자를 원합니다." />
+
+                    <CheckBox
+                        android:id="@+id/rb_sub_owner_9"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:buttonTint="@color/Mpuple5"
+                        android:text="만29세 이상 ~ 39세의 지원자를 원합니다." />
+
+                    <CheckBox
+                        android:id="@+id/rb_sub_owner_10"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:buttonTint="@color/Mpuple5"
+                        android:text="만39세 이상 ~ 49세의 지원자를 원합니다." />
+
+
+                </LinearLayout>
+
+                <CheckBox
+                    android:id="@+id/cb_sub_owner_standard"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:buttonTint="@color/Mpuple5"
+                    android:text="근로 기준법을 준수 할 것을 약속합니다."
+                    android:textSize="9pt"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:text="*충전 금액이 공고에 필요한 액수보다 적을 시 공고 등록 전 결제가 필요합니다."
+                    android:textColor="#000000"
+                    android:textSize="4pt"
+                    android:textStyle="bold"></TextView>
+
+                <Button
+                    android:id="@+id/btn_sub_owner_confirm"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginRight="40dp"
+                    android:layout_marginBottom="20dp"
+                    android:padding="10dp"
+                    android:text="공고등록하기"
+                    android:textColor="@color/gray1"
+                    android:textSize="8pt"
+                    android:textStyle="bold"
+                    app:backgroundTint="@color/Mpuple5"
+
+                    ></Button>
+
+            </LinearLayout>
+
+
+        </androidx.cardview.widget.CardView>
+    </ScrollView>
+</FrameLayout>

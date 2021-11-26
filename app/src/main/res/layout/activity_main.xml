@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+
+    tools:context=".MainActivity">
+
+
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:id="@+id/drawerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/topAppBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:minHeight="?attr/actionBarSize"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+
+                app:navigationIcon="@drawable/ic_baseline_more_horiz_24"
+                app:titleTextColor="@android:color/white"
+
+                >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="right">
+                <TextView
+                    android:id="@+id/topmenu_textview_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="일구하기"
+                    android:textColor="#000000"
+                    android:textSize="8pt"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/tmonblack"
+                    >
+                </TextView>
+                </LinearLayout>
+            </com.google.android.material.appbar.MaterialToolbar>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#666666">
+
+            </View>
+            <FrameLayout
+                android:id="@+id/main_fragment_container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+
+        <com.google.android.material.navigation.NavigationView
+            android:id="@+id/navigationView"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:clipToPadding="false"
+            app:menu="@menu/navigation_drawer" />
+
+    </androidx.drawerlayout.widget.DrawerLayout>
+
+
+</LinearLayout>

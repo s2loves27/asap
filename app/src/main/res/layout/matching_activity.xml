@@ -1,0 +1,388 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context='.MatchingActivity'>
+
+    <RelativeLayout
+        android:id="@+id/map_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">n
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_test"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="100dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginBottom="250dp"
+            app:cardCornerRadius="3dp"
+            app:cardElevation="1dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="10dp"
+
+                android:layout_marginRight="30dp"
+                android:layout_marginBottom="10dp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+
+                    android:src="@drawable/logo"></ImageView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="매칭이 진행중입니다."
+                    android:textColor="#000000"
+                    android:textSize="7pt"
+                    android:textStyle="bold"></TextView>
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/ll_matching_loading"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="10dp"
+                android:visibility="gone">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+
+                    app:cardCornerRadius="3dp"
+                    app:cardElevation="1dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:background="#ffffff"
+                        android:gravity="center_horizontal"
+                        android:text="1km 이내 공고를 매칭 중입니다."
+                        android:textColor="#000000"
+                        android:textSize="8pt"
+                        android:textStyle="bold">
+
+                    </TextView>
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_matching_start"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="10dp"
+                android:visibility="visible">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="bottom"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginBottom="10dp"
+                    app:cardCornerRadius="5dp"
+                    app:cardElevation="1dp">
+
+                    <TextView
+                        android:id="@+id/tv_matching_time"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:background="#ffffff"
+                        android:gravity="center_horizontal"
+                        android:text="14:00 - 20:00"
+                        android:textColor="#000000"
+                        android:textSize="8pt"
+                        android:textStyle="bold">
+
+                    </TextView>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="bottom"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    app:cardCornerRadius="5dp"
+                    app:cardElevation="1dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tv_matching_address"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginTop="10dp"
+                            android:background="#ffffff"
+                            android:gravity="left"
+                            android:text="서울 중구 태평로1가 25"
+                            android:textColor="@color/gray8"
+                            android:textSize="5pt">
+
+                        </TextView>
+
+                        <TextView
+                            android:id="@+id/tv_matching_place"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginTop="3dp"
+                            android:layout_marginBottom="7dp"
+                            android:background="#ffffff"
+                            android:gravity="left"
+                            android:text="스타벅스 한국프레스센터점"
+                            android:textColor="@color/Mpuple6"
+                            android:textSize="7pt"
+                            android:textStyle="bold">
+
+                        </TextView>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="30dp"
+                                android:layout_marginRight="30dp"
+
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <androidx.cardview.widget.CardView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="center"
+                                    android:layout_margin="3dp"
+                                    app:cardCornerRadius="1dp"
+                                    app:cardElevation="2dp"
+                                    app:strokeColor="#000000"
+                                    app:strokeWidth="5dp"
+
+                                    >
+
+                                    <TextView
+                                        android:id="@+id/tv_matching_category"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+
+                                        android:layout_gravity="center"
+                                        android:background="#ffffff"
+                                        android:gravity="center"
+                                        android:text="홀서빙"
+                                        android:textColor="#000000"
+                                        android:textSize="8pt"
+                                        android:textStyle="bold">
+
+                                    </TextView>
+                                </androidx.cardview.widget.CardView>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="30dp"
+                                android:layout_marginRight="30dp"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <androidx.cardview.widget.CardView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="center"
+                                    android:layout_margin="3dp"
+                                    app:cardCornerRadius="1dp"
+                                    app:cardElevation="2dp"
+                                    app:strokeColor="#000000"
+                                    app:strokeWidth="5dp"
+
+                                    >
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:orientation="vertical">
+
+                                        <TextView
+                                            android:id="@+id/tv_matching_payment"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginTop="30dp"
+                                            android:layout_marginBottom="30dp"
+                                            android:background="#ffffff"
+                                            android:gravity="center"
+                                            android:text="12000"
+                                            android:textColor="#000000"
+                                            android:textSize="7pt"
+                                            android:textStyle="bold">
+
+                                        </TextView>
+
+                                        <TextView
+
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginBottom="10dp"
+                                            android:background="#ffffff"
+                                            android:gravity="center"
+                                            android:text="시급"
+                                            android:textColor="#000000"
+                                            android:textSize="5pt"
+                                            android:textStyle="bold">
+
+                                        </TextView>
+                                    </LinearLayout>
+                                </androidx.cardview.widget.CardView>
+                            </LinearLayout>
+
+<!--                            <LinearLayout-->
+
+<!--                                android:layout_width="0dp"-->
+<!--                                android:layout_height="match_parent"-->
+<!--                                android:layout_marginLeft="10dp"-->
+<!--                                android:layout_marginRight="10dp"-->
+<!--                                android:layout_weight="1"-->
+<!--                                android:orientation="vertical">-->
+
+<!--                                <androidx.cardview.widget.CardView-->
+<!--                                    android:layout_width="match_parent"-->
+<!--                                    android:layout_height="match_parent"-->
+<!--                                    android:layout_gravity="center"-->
+<!--                                    android:layout_margin="3dp"-->
+<!--                                    app:cardCornerRadius="1dp"-->
+<!--                                    app:cardElevation="2dp"-->
+<!--                                    app:strokeColor="#000000"-->
+<!--                                    app:strokeWidth="5dp"-->
+
+<!--                                    >-->
+
+<!--                                    <LinearLayout-->
+<!--                                        android:layout_width="match_parent"-->
+<!--                                        android:layout_height="match_parent"-->
+<!--                                        android:orientation="vertical">-->
+
+<!--                                        <TextView-->
+<!--                                            android:id="@+id/tv_matching_grade"-->
+<!--                                            android:layout_width="match_parent"-->
+<!--                                            android:layout_height="wrap_content"-->
+<!--                                            android:layout_marginTop="30dp"-->
+<!--                                            android:layout_marginBottom="30dp"-->
+<!--                                            android:background="#ffffff"-->
+<!--                                            android:gravity="center"-->
+<!--                                            android:text="4.3 / 5"-->
+<!--                                            android:textColor="#000000"-->
+<!--                                            android:textSize="7pt"-->
+<!--                                            android:textStyle="bold">-->
+
+<!--                                        </TextView>-->
+
+<!--                                        <TextView-->
+<!--                                            android:layout_width="match_parent"-->
+<!--                                            android:layout_height="wrap_content"-->
+<!--                                            android:layout_marginBottom="10dp"-->
+<!--                                            android:background="#ffffff"-->
+<!--                                            android:gravity="center"-->
+<!--                                            android:text="평점"-->
+<!--                                            android:textColor="#000000"-->
+<!--                                            android:textSize="5pt"-->
+<!--                                            android:textStyle="bold">-->
+
+<!--                                        </TextView>-->
+<!--                                    </LinearLayout>-->
+<!--                                </androidx.cardview.widget.CardView>-->
+<!--                            </LinearLayout>-->
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginBottom="15dp"
+                            android:orientation="horizontal">
+
+                            <Button
+                                android:id="@+id/btn_matching_confirm"
+                                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginRight="10dp"
+                                android:layout_weight="2"
+                                android:text="Asap, 갈께요!"
+                                android:textColor="@color/gray1"
+                                android:textSize="8pt"
+                                android:textStyle="bold"
+                                app:backgroundTint="@color/Mpuple5"
+
+                                ></Button>
+
+
+                            <Button
+                                android:id="@+id/btn_matching_cancle"
+                                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="20dp"
+                                android:layout_weight="1"
+                                android:text="안갈래요"
+                                android:textColor="@color/Mpuple6"
+                                android:textSize="5pt"
+                                android:textStyle="bold"
+                                app:backgroundTint=" #ffffff"
+                                app:strokeColor="@color/Mpuple5"
+                                app:strokeWidth="0.5dp"></Button>
+
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+        </FrameLayout>
+    </LinearLayout>
+</FrameLayout>
+
