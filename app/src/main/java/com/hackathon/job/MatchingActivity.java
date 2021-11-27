@@ -166,7 +166,7 @@ public class MatchingActivity extends AppCompatActivity implements MapView.Curre
 //        tv_matching_grade = findViewById(R.id.tv_matching_grade);
 
         new MatchingAsyncTask(db.announceCardDao(), db.userDao(), tv_matching_time, tv_matching_address,
-                tv_matching_place, tv_matching_category, tv_matching_payment, mapView).execute("dolphin8522@naver.com");
+                tv_matching_place, tv_matching_category, tv_matching_payment, mapView).execute(Util.loginUser.getEmail());
 
 
 
@@ -179,7 +179,7 @@ public class MatchingActivity extends AppCompatActivity implements MapView.Curre
 
                 AnnounceCard announceCard = new AnnounceCard();
 
-                new AnnounceAsyncTask(db.announceCardDao()).execute("dolphin8522@naver.com");
+                new AnnounceAsyncTask(db.announceCardDao()).execute(Util.loginUser.getEmail());
 
 
                 finish();
